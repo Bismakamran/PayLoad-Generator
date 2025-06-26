@@ -1,69 +1,89 @@
-# 🔐 Payload Encoder & Obfuscator (Go)
+README
+🚀 Modular Payload Generator Tool (Go)
+A custom payload generation toolkit for Ethical Hackers, Penetration Testers, and Security Researchers. This tool automates the creation of XSS, SQL Injection, and Command Injection payloads, supporting advanced encoding, obfuscation, and reporting techniques — all from the command line.
 
-This is a standalone **Go-based utility** that performs advanced encoding and obfuscation techniques commonly used in web payloads to test WAFs, filters, and input validation.
+🔐 Developed with ❤️ by @rajaabdullahnasir
 
----
-
-## ✨ Features
-
-### 🔸 Encoders
-Convert any input string into:
-- ✅ **Base64**
-- ✅ **URL Encoding**
-- ✅ **Hex Encoding** (`\x41\x42`)
-- ✅ **Unicode Escaping** (`\u0041\u0042`)
-
-### 🔸 Obfuscators
-Modify payloads to evade filters using:
-- 🔀 **Random spacing** between characters
-- 💬 **HTML comment injection**
-- 🆎 **Case flipping** (e.g. `<ScRiPt>`)
-- 🧙 **Homoglyph replacement** (Unicode look-alikes)
-
----
-
-## 🧪 Example Output
-
-
-Output:
-Base64: PHNjcmlwdD5hbGVydCgxKTwvc2NyaXB0Pg==
-URL Encoded: %3Cscript%3Ealert%281%29%3C%2Fscript%3E
-Hex Encoded: \x3c\x73\x63\x72\x69\x70\x74...
-Unicode: \u003C\u0073\u0063\u0072...
-
-Random Spacing: < s c r i p t > a l e r t ( 1 )
-With Comments: <script><!-- -->alert(1)</script><!-- -->
-Case Flipped: <ScRiPt>ALert(1)</ScRipT>
-Homoglyphs: <ѕсrіpt>аⅼеrt(1)</ѕсrіpt>
-
-
-
----
-
-## 📁 Folder Structure
-
+🧠 What This Tool Can Do
+✅ Generate payloads for XSS, SQLi, and Command Injection
+✅ Apply Base64, URL, Hex, Unicode encodings
+✅ Add WAF bypass, random case, comments, homoglyphs, and more
+✅ Save payloads as .json, .txt, or display in console
+✅ Copy payloads to clipboard
+✅ Modular codebase for easy expansion
+✅ ZAP integration ready
+📁 Project Structure
 payload-generator-go/
 │
-├── main.go # Test runner for encoder/obfuscator
-├── go.mod # Go module config
+├── main.go                      # Entry point with CLI logic
+├── go.mod                       # Go module definition
 │
-└── utils/
-├── encoder.go # Encoding functions
-└── obfuscator.go # Obfuscation functions
+├── /modules/                    # Core payload logic
+│   ├── xss.go                   # Reflected, Stored, DOM XSS
+│   ├── sqli.go                  # Error-based, Union, Blind SQLi
+│   └── cmdinj.go                # Linux/Windows command injection
+│
+├── /utils/                      # Reusable helper tools
+│   ├── encoder.go               # Base64, URL, Hex, Unicode encoders
+│   ├── obfuscator.go            # Obfuscation strategies
+│   ├── clipboard.go             # Clipboard handler (xclip/pbcopy)
+│   └── output.go                # JSON, TXT, console output
+│
+├── /zapapi/                     # (Optional) OWASP ZAP integration
+│   ├── zap_client.go
+│   └── zap_tester.go
+│
+├── /payloads/                   # Input templates
+│   ├── xss.json
+│   ├── sqli.json
+│   └── cmd.json
+│
+├── /reports/                    # Generated payloads & results
+│   ├── results.json
+│   ├── payloads.txt
+│   └── report.go
+│
+└── README.md
+⚙️ Installation & Setup
+📦 Requirements
+Go 1.22+
+For Linux: xclip for clipboard functionality
+sudo apt install xclip
+🔧 Build
+git clone https://github.com/rajaabdullahnasir/Custom-Payload-Generator.git
+cd Custom-Payload-Generator
+go mod tidy
+go build -o payloadgen
+🚀 Usage
+Basic Help
+./payloadgen --help
+Generate XSS Payloads
+./payloadgen --xss
+./payloadgen --xss --output=json --save
+./payloadgen --xss --output=txt --clipboard
+Generate SQLi Payloads
+./payloadgen --sqli
+./payloadgen --sqli --output=txt --save
+Generate Command Injection Payloads
+./payloadgen --cmdi
+./payloadgen --cmdi --output=json --save
+✨ Features
+Module	Details
+🔍 XSS	Reflected, Stored, DOM
+💉 SQLi	Error, Union, Blind, WAF bypass
+💣 CMDi	Linux/Windows OS commands
+🔐 Encoding	Base64, URL, Hex, Unicode
+🎭 Obfuscation	Spacing, comments, homoglyphs
+📋 Clipboard	Copy directly for instant testing
+📤 Output	Console, JSON, TXT
+🔎 ZAP Ready	Integrate with ZAP (disabled by default)
+💡 Examples
+./payloadgen --xss --output=json --save
+./payloadgen --sqli --output=txt
+./payloadgen --cmdi --clipboard
+🔐 Disclaimer
+This tool is for educational and ethical use only. Do not use it against systems you don’t own or have permission to test.
 
+📜 License
+MIT License — feel free to use and contribute.
 
-
----
-
-## 🚀 Getting Started
-
-### 1. Clone the Repo or Copy Files
-Make sure `main.go`, `utils/encoder.go`, and `utils/obfuscator.go` are in place.
-
-### 2. Initialize the Module
-```bash
-go mod init payload-generator-go
-
-## Run the Tool
-
-go run main.go
