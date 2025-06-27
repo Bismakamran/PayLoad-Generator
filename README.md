@@ -5,7 +5,6 @@ readme_content = """
 
 A custom payload generation toolkit for Ethical Hackers, Penetration Testers, and Security Researchers. This tool automates the creation of **XSS**, **SQL Injection**, and **Command Injection** payloads, supporting advanced encoding, obfuscation, and reporting techniques — all from the command line.
 
-🔐 Developed with ❤️ by [@rajaabdullahnasir](https://github.com/rajaabdullahnasir)
 
 ---
 
